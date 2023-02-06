@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const paymentFormContainer = styled.div`
+export const PaymentFormContainer = styled.div`
   height: 300px;
   display: flex;
   flex-direction: column;
