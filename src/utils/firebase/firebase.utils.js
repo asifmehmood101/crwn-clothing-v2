@@ -29,6 +29,7 @@ const firebaseConfig = {
   appId: '1:626766232035:web:506621582dab103a4d08d6',
 };
 
+// eslint-disable-next-line no-unused-vars
 const firebaseApp = initializeApp(firebaseConfig);
 
 const googleProvider = new GoogleAuthProvider();
@@ -48,7 +49,7 @@ export const db = getFirestore();
 export const addCollectionAndDocuments = async (
   collectionKey,
   objectsToAdd,
-  field
+  field,
 ) => {
   const collectionRef = collection(db, collectionKey);
   const batch = writeBatch(db);
@@ -72,7 +73,7 @@ export const getCategoriesAndDocuments = async () => {
 
 export const createUserDocumentFromAuth = async (
   userAuth,
-  additionalInformation = {}
+  additionalInformation = {},
 ) => {
   if (!userAuth) return;
 
@@ -124,7 +125,7 @@ export const getCurrentUser = () => {
         unsubscribe();
         resolve(userAuth);
       },
-      reject
+      reject,
     );
   });
 };
